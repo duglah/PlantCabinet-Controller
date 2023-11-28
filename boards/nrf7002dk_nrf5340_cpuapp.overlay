@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2023 Philipp Manstein <philipp.gm@gmail.com>
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+#include <zephyr/dt-bindings/ipc_service/static_vrings.h>
+
+/ {
+	chosen {
+		nordic,pm-ext-flash = &mx25r64;
+	};
+
+	load_switch: load_switch {
+		compatible = "power-switch";
+		gpios = <&gpio1 15 GPIO_ACTIVE_HIGH>;
+	};
+
+	pwm_fan: pwm_fan {
+		compatible = "pwm-fan";
+		pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+		off-pulse = <PWM_USEC(0)>;
+		low-pulse = <PWM_USEC(500)>;
+		mid-pulse = <PWM_USEC(1250)>;
+		high-pulse = <PWM_USEC(2500)>;
+	};
+};
+
+/* Set IPC thread priority to the highest value to not collide with other threads. */
+&ipc0 {
+	zephyr,priority = <0 PRIO_COOP>;
+};
+
+&i2c1 {
+	bme680@76 {
+		compatible = "bosch,bme680";
+		reg = <0x76>;
+	};
+};

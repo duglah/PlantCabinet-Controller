@@ -1,0 +1,34 @@
+# Copyright (c) 2023 Philipp Manstein
+# SPDX-License-Identifier: Apache-2.0
+
+description: PWM-driven fan control.
+
+compatible: "pwm-fan"
+
+include: base.yaml
+
+properties:
+  pwms:
+    required: true
+    type: phandle-array
+    description: PWM specifier driving the fan.
+
+  off-pulse:
+    required: true
+    type: int
+    description: Off pulse width (nanoseconds).
+
+  low-pulse:
+    required: true
+    type: int
+    description: Low pulse width (nanoseconds).
+
+  mid-pulse:
+    required: true
+    type: int
+    description: Mid pulse width (nanoseconds).
+
+  high-pulse:
+    required: true
+    type: int
+    description: High pulse width (nanoseconds).
