@@ -1,5 +1,16 @@
 # PlantCabinet🪴 Controller
 
+The PlantCabinet🪴 Controller is your personal assistant for the optimal growth of your tropical plants in the indoor plant cabinet! This innovative device allows you to precisely monitor and control the conditions for your green protégés to create an ideal growing environment.
+
+The controller is equipped with a variety of features aimed at meeting the needs of tropical plants. From adjusting the special plant LED light to regulating airflow with an integrated fan, this controller offers a comprehensive solution for indoor gardeners who want to create the optimal breeding ground for their exotic plants.
+
+The device integrates seamlessly into your smart home. Thanks to the advanced smart home protocol Matter, you can now effortlessly integrate your plant garden into your smart home and take control of the conditions with just a tap or combine it with other devices.
+
+In this guide you will learn step by step how to assemble and configure your own PlantCabinet🪴 Controller. Discover why an indoor plant garden house is invaluable, especially for propagating plants and helping tropical crops thrive. Let's pave the way to a thriving, tropical paradise within your own four walls!
+
+Build instructions:
+[PlantCabinet🪴 Controller on Hackster.io](https://www.hackster.io/philippmanstein/plantcabinet-controller-2dbaa8)
+
 ## Provision
 
 ### QR Code
